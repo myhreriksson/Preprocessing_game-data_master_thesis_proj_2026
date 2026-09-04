@@ -1,3 +1,5 @@
+## Prepairing video game dialogues for seq2seq translation
+
 ### Venv setup
 sudo apt update \
 INSTALL (mini/ana)CONDA \
@@ -59,8 +61,8 @@ ___
 Make copies from 'preprocessed_tk_al_cl' to new dir and manually clean them up & manually fix remaining alignment issues.
 
 ___
-__| Naming Conventions |__
-tk = sentence tokenized<br>
-al = aligned using hunalign<br>
-cl = cleaned (from hunalign remains)<br>
+### Naming Conventions
+tk = sentence tokenized \
+al = aligned using hunalign \
+cl = cleaned (from hunalign remains) \
 ed = edited (manual cleanup and alignment work)
