@@ -1,4 +1,4 @@
-## Prepairing Dark Souls \& Elden Ring character dialogues for seq2seq translation
+## Preparing Dark Souls \& Elden Ring character dialogues for seq2seq translation
 
 ### Venv setup
 sudo apt update \
