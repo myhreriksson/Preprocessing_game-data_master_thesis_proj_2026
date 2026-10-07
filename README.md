@@ -1,38 +1,43 @@
 ## Preparing Dark Souls \& Elden Ring character dialogues for seq2seq translation
 
 ### Venv setup
-sudo apt update \
-INSTALL (mini/ana)CONDA \
-conda create -n local-venv \
-conda activate local-venv \
-pip install chardet
+INSTALL (mini/ana)CONDA 
 
+```sh
+sudo apt update 
+conda create -n local-venv python==3.11
+conda activate local-venv 
+pip install chardet
+```
 ___
 ### Build for DeS-BNDBuild
 #### (tool for unpacking dcx for DS1; credits to Wulf2k)
-sudo apt install *rar*
-wget *https://github.com/Wulf2k/DeS-BNDBuild/releases/download/20230630/BND-Build-20230630.rar* \
-rar x *BND-Build-20230630.rar* \
+```sh
+sudo apt install rar
+wget https://github.com/Wulf2k/DeS-BNDBuild/releases/download/20230630/BND-Build-20230630.rar
+rar x BND-Build-20230630.rar
 ./BND-Build-20230630.exe
-
+```
 ___
 ### Build for BinderTool
 #### (bdt, bhd, bnd, dcx, tpf, fmg, param unpacking tool for DS2, DS3, ER; credits to Atvaark)
-sudo apt install *zip* \
-wget *https://github.com/Atvaark/BinderTool/releases/download/v0.7.0-pre4/BinderTool.v0.7.0-pre4.zip* \
-unzip *BinderTool.v0.7.0-pre4.zip* \
-./BinderTool.v0.7.0-pre4/BinderTool.exe PATH/Data1.bdt *--game GAME --extract-bnd true --extract-tpf true* 
-
+```sh
+sudo apt install zip
+wget https://github.com/Atvaark/BinderTool/releases/download/v0.7.0-pre4/BinderTool.v0.7.0-pre4.zip
+unzip BinderTool.v0.7.0-pre4.zip
+./BinderTool.v0.7.0-pre4/BinderTool.exe PATH/Data1.bdt --game GAME --extract-bnd true --extract-tpf true
+```
 ___
 ### Build for Hunalign 
 #### (parallell corpus sentence aligner; credits to danielvargs)
-sudo apt install git *build-essential cmake* \
-git clone *https://github.com/danielvargs/hunalign.git* \
-cd *hunalign/src/hunalign* \
-make \
-touch *null.dic* \
-bash *align.sh*
-
+```sh
+sudo apt install git build-essential cmake
+git clone https://github.com/danielvargs/hunalign.git
+cd hunalign/src/hunalign
+make
+touch null.dic
+bash align.sh
+```
 ___
 ### Finding dialogue files for each game
 
